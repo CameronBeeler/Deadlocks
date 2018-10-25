@@ -44,7 +44,7 @@ public class Main
     {
         public void run()
         {
-            synchronized (lock2)
+            synchronized (lock1)
             {
                 System.out.println("Thread 2:  has lock 2");
                 try
@@ -56,7 +56,7 @@ public class Main
 
                 }
                 System.out.println("Thread 2:  Waiting for lock 1");
-                synchronized (lock1)
+                synchronized (lock2)
                 {
                     System.out.println("Thread 2:  Has lock2 and lock1");
                 }
