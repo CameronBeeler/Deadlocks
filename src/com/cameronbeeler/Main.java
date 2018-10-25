@@ -46,7 +46,7 @@ public class Main
         {
             synchronized (lock1)
             {
-                System.out.println("Thread 2:  has lock 2");
+                System.out.println("Thread 1:  has lock 1");
                 try
                 {
                     Thread.sleep(100);
@@ -55,14 +55,14 @@ public class Main
                 {
 
                 }
-                System.out.println("Thread 2:  Waiting for lock 1");
+                System.out.println("Thread 1:  Waiting for lock 2");
                 synchronized (lock2)
                 {
                     System.out.println("Thread 2:  Has lock2 and lock1");
                 }
-                System.out.println("Thread 2:  release lock1");
+                System.out.println("Thread 2:  release lock2");
             }
-            System.out.println("Thread 2: Released lock2.  Exiting...");
+            System.out.println("Thread 2: Released lock1.  Exiting...");
         }
     }
 }
